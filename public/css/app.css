@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.container {
+    font-family: 'Noto Sans', sans-serif;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+}
+
+.greeting {
+    display: flex;
+    height: 37.68rem;
+    width: 50%;
+    background-image: url("/img/bg.png");
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 2rem;
+}
+
+.hello {
+    font-weight: 200;
+    color: #0F6048;
+    font-size: 44.74px;
+    margin-bottom: 3rem;
+    animation: animatetext 4s 1s;
+}
+
+.paragraph {
+    width: 52%;
+    font-size: 25px;
+    color: #F5F5F5;
+    font-weight: 100;
+    text-align: center;
+    animation: animatetext 5s 1s;
+}
+
+@keyframes animatetext {
+    0% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+
+}
+
+.registration-form {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
