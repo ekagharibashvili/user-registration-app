@@ -75,3 +75,10 @@
     align-items: center;
     justify-content: center;
 }
+
+
+#date {
+    background: white url(/img/calendar.png) right no-repeat;
+    height: 2rem;
+}
+

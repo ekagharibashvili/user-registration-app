@@ -27,19 +27,14 @@
                 <div class ="form-container">
                     <h1 class = "add-user">Add a User</h1>
                     <p class = "add-info">Type in your info</p>
-
-                    <label for="name"></label>
-                    <input type="text" placeholder="Name" name="name" id="name" required>
-
-                    <label for="psw"><b>Password</b></label>
-                    <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
-
-                    <label for="psw-repeat"><b>Repeat Password</b></label>
-                    <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
                     <hr>
-                    <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
-
-                    <button type="submit" class="registerbtn">Register</button>
+                    <input type="text" placeholder="Name" name="name" id="name" required>
+                    <hr>
+                    <input type="text" placeholder="country" name="country" id="country" required>
+                    <hr>
+                    <input type="text" placeholder="Date of Birth" name = "date" id = "date" onfocus="(type='date')">
+                    <hr>
+                    <button type="submit" class="save">SAVE</button>
 
                 </div>
             </div>
@@ -48,5 +43,7 @@
         </div>
 
     </div>
+
+    <script src ="js/app.js"></script>
 </body>
 </html>
