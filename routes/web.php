@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HomeController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\UsersController;
 /*
 |--------------------------------------------------------------------------
@@ -14,8 +14,11 @@ use App\Http\Controllers\UsersController;
 |
 */
 
-Route::get('/', [HomeController::class, 'index']);
-Route::get('/users', [UsersController::class, 'logins']);
+Route::get('/', [UserController::class, 'index'])->name('home');
+Route::get('/users', [UsersController::class, 'logins'])->name('users');
+
+
+Route::post('/', [UserController::class, 'store'])->name('store');
 
 
 

@@ -20,8 +20,14 @@
 
         <div class = "registration-form">
 
-          <form>
+@if (session('successMsg'))
 
+<div>{{ session('successMsg') }} </div>
+
+@endif
+
+          <form action = "{{ route('store') }}" method = "POST">
+          @csrf
             <div class = "form">
 
                 <div class ="form-container">
@@ -29,10 +35,13 @@
                     <p class = "add-info">Type in your info</p>
                     <hr>
                     <input type="text" placeholder="Name" name="name" id="name" required>
+                    
                     <hr>
                     <input type="text" placeholder="country" name="country" id="country" required>
+                    
                     <hr>
                     <input type="text" placeholder="Date of Birth" name = "date" id = "date" onfocus="(type='date')">
+                    
                     <hr>
                     <button type="submit" class="save">SAVE</button>
 
