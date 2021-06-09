@@ -1,8 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\UserController;
-use App\Http\Controllers\UsersController;
+use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\DataController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,12 +15,10 @@ use App\Http\Controllers\UsersController;
 |
 */
 
-Route::get('/', [UserController::class, 'index'])->name('home');
-Route::get('/users', [UsersController::class, 'logins'])->name('users');
 
-
-Route::post('/', [UserController::class, 'store'])->name('store');
-
+Route::get('/', [RegisterController::class, 'index']);
+Route::get('data', [DataController::class, 'saved']);
+Route::post('add', [RegisterController::class, 'add']);
 
 
 

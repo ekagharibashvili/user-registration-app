@@ -20,13 +20,18 @@
 
         <div class = "registration-form">
 
-@if (session('successMsg'))
-
-<div>{{ session('successMsg') }} </div>
-
+@if(Session::get('sucesss'))
+    <div class="alert alert-success">
+    sesion get success
+    </div>
 @endif
+@if(Session::get('fail'))
+    <div class="alert alert-fail">
+    sesion get fail
+    </div>
+@endif
+          <form action = "add" method = "post">
 
-          <form action = "{{ route('store') }}" method = "POST">
           @csrf
             <div class = "form">
 
@@ -41,7 +46,7 @@
                     
                     <hr>
                     <input type="text" placeholder="Date of Birth" name = "date" id = "date" onfocus="(type='date')">
-                    
+                   
                     <hr>
                     <button type="submit" class="save">SAVE</button>
 
