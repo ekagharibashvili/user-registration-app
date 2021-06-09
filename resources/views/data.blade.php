@@ -17,7 +17,7 @@ td, th {
 tr:nth-child(even) {
   background-color: #dddddd;
 }
-</style>
+</style> 
 </head>
 <body>
 
@@ -29,36 +29,14 @@ tr:nth-child(even) {
     <th>Country</th>
     <th>Date of Birth</th>
   </tr>
+
+  @foreach ($list as $item)
   <tr>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td>{{ $item->name }}</td>
+    <td>{{ $item->country }}</td>
+    <td>{{ $item->date }}</td>
   </tr>
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
+ @endforeach
 </table>
 
 </body>

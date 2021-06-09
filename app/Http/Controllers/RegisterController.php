@@ -8,8 +8,9 @@ use Illuminate\Support\Facades\DB;
 class RegisterController extends Controller
 {
     function index() {
+    
         return view('welcome');
-    }
+    } 
 
     function add(Request $request) {
         
