@@ -20,16 +20,6 @@
 
         <div class = "registration-form">
 
-@if(Session::get('sucesss'))
-    <div class="alert alert-success">
-    sesion get success
-    </div>
-@endif
-@if(Session::get('fail'))
-    <div class="alert alert-fail">
-    sesion get fail
-    </div>
-@endif
           <form action = "add" method = "post">
 
           @csrf

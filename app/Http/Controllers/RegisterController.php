@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
+
 class RegisterController extends Controller
 {
     function index() {
@@ -13,11 +14,10 @@ class RegisterController extends Controller
     } 
 
     function add(Request $request) {
-        
         $request->validate([
-            'name'=>'required',
+            'name'=>'required|min:5',
             'country'=>'required',
-            'date'=>'required'
+            'date'=>'required|date|before: -18 years'
         ]);
 
         $query = DB::table('registereds')->insert([
@@ -26,10 +26,6 @@ class RegisterController extends Controller
             'date'=>$request->input('date')
         ]);
 
-        if($query) {
-            return back()->with('successs', 'Data have been successfully inserted');
-        }else{
-            return back()->with('fail', 'Data fail'); 
-        }
+            return back(); 
     }
 }
