@@ -2,9 +2,13 @@
 
 
 * {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    list-style-type: none;
+    border: none;
 }
 
 .container {
@@ -77,8 +81,99 @@
 }
 
 
+.add-user {
+    font-weight: 200;
+    color: #58AF9B;
+    font-size: 44.74px;
+}
+
+.add-info {
+    font-size: 18px;
+    color: #4B4F4E;
+    margin: 0.5rem;
+}
+
+select:required:invalid {
+    color: #666;
+  }
+  option[value=""][disabled] {
+    display: none;
+  }
+  option {
+    color: #000;
+  }
+
+#name,
+#country,
 #date {
-    background: white url(/img/calendar.png) right no-repeat;
-    height: 2rem;
+    width: 250px;
+    height: 40px;
+    margin: 0.5rem;
+    border-radius: 5px;
+    background-color: #E1F8F6;
+}
+
+::-webkit-input-placeholder,
+select,
+input[type="text"],
+input[type="date"] { 
+    font-size: 18px;
+}
+select {
+    background: #E1F8F6 url('/img/arrow.png') right no-repeat;
+}
+
+#date {
+    background: #E1F8F6 url('/img/calendar.png') right no-repeat;
+
+}
+
+.save {
+    width: 250px;
+    height: 40px;
+    margin: 0.7rem;
+    border-radius: 27px;
+    font-size: 20px;
+    color: #FFFFFF;
+    border: none;
+    background: linear-gradient(to right,
+    #58AF9B, #179570);
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    animation: fadeAnimation 1s 2s forwards;
+    overflow: hidden;
+    position: relative;
+}
+
+.save:focus {
+    border: none;
+}
+
+.save::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, transparent, #fff, transparent);
+    position: absolute;
+    top: 0;
+    left: -100%;
+    transform: skewX(-30deg);
+    transition: left 0.5s;
+}
+
+.save:hover::before {
+    left: 100%;
+}
+
+@keyframes fadeAnimation {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+    }
+    100%{
+        opacity: 1;
+        visibility: visible;
+    }
 }
 

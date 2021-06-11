@@ -30,13 +30,17 @@
                     <p class = "add-info">Type in your info</p>
                     <hr>
                     <input type="text" placeholder="Name" name="name" id="name" required>
-                    
                     <hr>
-                    <input type="text" placeholder="country" name="country" id="country" required>
-                    
+                    <select id="country" name="country" required>
+                    <option id = "disable" value="" disabled selected>Country</option>
+                    <option value="Australia">Australia</option>
+                    <option value="Canada">Canada</option>
+                    <option value="Georgia">Georgia</option>
+                    <option value="Switzerland">Switzerland</option>
+                    <option value="United States">United States</option>
+                    </select>
                     <hr>
-                    <input type="text" placeholder="Date of Birth" name = "date" id = "date" onfocus="(type='date')">
-                   
+                    <input type="text" placeholder="Date of Birth" name = "date" id = "date" onClick="(this.type='date')" required>
                     <hr>
                     <button type="submit" class="save">SAVE</button>
 
