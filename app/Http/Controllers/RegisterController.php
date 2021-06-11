@@ -26,6 +26,7 @@ class RegisterController extends Controller
             'date'=>$request->input('date')
         ]);
 
-            return redirect('/'); 
+            return back()->with('success', 'You have registered successfully!');
+            
     }
 }

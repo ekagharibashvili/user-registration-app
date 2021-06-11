@@ -19,12 +19,12 @@
         </div> 
 
         <div class = "registration-form">
-
+    
           <form action = "add" method = "post">
 
           @csrf
             <div class = "form">
-
+   
                 <div class ="form-container">
                     <h1 class = "add-user">Add a User</h1>
                     <p class = "add-info">Type in your info</p>
@@ -57,8 +57,13 @@
             </div>
 
            </form>
+         @if(session()->has('success'))
+         <div>
+         <p class="success">{{ session('success') }}</p>
         </div>
+         @endif
 
+        </div>
     </div>
 
 </body>

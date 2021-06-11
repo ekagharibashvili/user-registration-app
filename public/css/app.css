@@ -182,3 +182,7 @@ select {
     color: red;
     font-size: 15px;
 }
+
+.success {
+    color: #206953;
+}
