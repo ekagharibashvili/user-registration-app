@@ -26,6 +26,6 @@ class RegisterController extends Controller
             'date'=>$request->input('date')
         ]);
 
-            return back(); 
+            return redirect('/'); 
     }
 }

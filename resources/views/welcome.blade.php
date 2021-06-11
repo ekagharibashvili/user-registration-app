@@ -29,18 +29,27 @@
                     <h1 class = "add-user">Add a User</h1>
                     <p class = "add-info">Type in your info</p>
                     <hr>
-                    <input type="text" placeholder="Name" name="name" id="name" required>
+                    <input type="text" placeholder="Name" name="name" id="name">
+                    @error('name')
+                    <p class="error">{{ $message }}</p>
+                    @enderror
                     <hr>
                     <select id="country" name="country" required>
-                    <option id = "disable" value="" disabled selected>Country</option>
+                    <option class = "disable" value="" disabled selected>Country</option>
                     <option value="Australia">Australia</option>
                     <option value="Canada">Canada</option>
                     <option value="Georgia">Georgia</option>
                     <option value="Switzerland">Switzerland</option>
                     <option value="United States">United States</option>
                     </select>
+                    @error('country')
+                    <p class="error">{{ $message }}</p>
+                    @enderror
                     <hr>
-                    <input type="text" placeholder="Date of Birth" name = "date" id = "date" onClick="(this.type='date')" required>
+                    <input type="text" placeholder="Date of Birth" name = "date" id = "date" onClick="(this.type='date')">
+                    @error('date')
+                    <p class="error">{{ $message }}</p>
+                    @enderror
                     <hr>
                     <button type="submit" class="save">SAVE</button>
 

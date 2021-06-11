@@ -93,16 +93,6 @@
     margin: 0.5rem;
 }
 
-select:required:invalid {
-    color: #666;
-  }
-  option[value=""][disabled] {
-    display: none;
-  }
-  option {
-    color: #000;
-  }
-
 #name,
 #country,
 #date {
@@ -119,9 +109,20 @@ input[type="text"],
 input[type="date"] { 
     font-size: 18px;
 }
+
+select:required:invalid {
+    color: #666;
+  }
+  option[value=""][disabled] {
+    display: none;
+  }
+  option {
+    color: #000;
+  }
+
 select {
     background: #E1F8F6 url('/img/arrow.png') right no-repeat;
-}
+} 
 
 #date {
     background: #E1F8F6 url('/img/calendar.png') right no-repeat;
@@ -177,3 +178,7 @@ select {
     }
 }
 
+.error {
+    color: red;
+    font-size: 15px;
+}
