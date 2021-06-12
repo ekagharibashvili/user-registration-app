@@ -11,18 +11,18 @@
 <div class = "data-container">
 <h1 class = "data-heading">User Data Table</h1>
 
-<table>
+<table id = "unique">
   <tr>
     <th>Name</th>
-    <th>Country</th>
-    <th>Date of Birth</th>
+    <th class = "country">Country</th>
+    <th class= "date">Date of Birth</th>
   </tr>
 
   @foreach ($list as $item)
   <tr>
     <td>{{ $item->name }}</td>
-    <td>{{ $item->country }}</td>
-    <td>{{ $item->date }}</td>
+    <td class = "country">{{ $item->country }}</td>
+    <td class ="date">{{ $item->date }}</td>
   </tr>
  @endforeach
 </table>

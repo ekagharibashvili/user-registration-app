@@ -239,16 +239,72 @@ select {
 }
 
 table {
-    
+    width: 60%;
+    border-collapse: separate; 
+    border-spacing: 0.8em 1em;
   }
-  
-  td, th {
-    border: 1px solid #dddddd;
+
+th {
+    width: 33%;
+    background-color: #58AF9B;
+    border-radius: 5px;
+    font-size: 18px;
+    color: #FFFFFF;
+    font-weight: 200;
     text-align: left;
     padding: 8px;
   }
-  
-  tr:nth-child(even) {
-    background-color: #dddddd;
+
+  .country {
+      text-align: center;
   }
 
+  .date {
+      text-align: right;
+  }
+  
+td {
+    background-color: #E1F8F6;
+    border-radius: 5px;
+    font-size: 18px;
+    color: #4B4F4E;
+    font-weight: 200;
+    text-align: left;
+    padding: 8px;
+}
+
+@media (max-width: 815px) {
+    table {
+        width: 90%;
+    }
+
+    .data-heading {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 520px) {
+    table {
+        width: 90%;
+    }
+
+    th, td {
+        font-size: 15px;
+    }
+    
+}
+
+@media (max-width: 455px) {
+    table {
+        width: 95%;
+        font-size: 15px;
+        padding: 0;
+    }
+
+    th, td {
+        font-size: 10px;
+    }
+
+}
+
+/* end of data page design */
