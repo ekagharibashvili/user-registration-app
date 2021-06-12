@@ -1,2 +1,2 @@
-# user-registration-app
+# User-Registration-App
 
