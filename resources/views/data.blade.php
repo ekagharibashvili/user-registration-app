@@ -1,27 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<style>
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-}
-
-td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
-}
-
-tr:nth-child(even) {
-  background-color: #dddddd;
-}
-</style> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "css/app.css">
+    <title>Data Page</title>
 </head>
 <body>
-
-<h2></h2>
+<div class = "data-container">
+<h1 class = "data-heading">User Data Table</h1>
 
 <table>
   <tr>
@@ -39,5 +27,6 @@ tr:nth-child(even) {
  @endforeach
 </table>
 
+</div>
 </body>
 </html>
